@@ -111,7 +111,6 @@ jobs:
         # Reads 'webapp_endpoint' field values from deployment_config.json
         #=====================================     
       - name: Deploy to webapp
-        if: ${{ inputs.deployment_type == 'webapp'  }}  
         uses: ./.github/actions/webapp_deployment
         with:
           FLOW_TO_EXECUTE: ${{ inputs.flow_type }}
