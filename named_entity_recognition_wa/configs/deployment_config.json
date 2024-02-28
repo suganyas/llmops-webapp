@@ -1,0 +1,35 @@
+{
+    "azure_managed_endpoint":[
+        {
+            "ENV_NAME": "dev",
+            "TEST_FILE_PATH": "sample-request.json",
+            "ENDPOINT_NAME": "webapptest",
+            "ENDPOINT_DESC": "An online endpoint serving a flow for named entity flow",
+            "DEPLOYMENT_DESC": "prompt flow deployment",
+            "PRIOR_DEPLOYMENT_NAME": "deploy0webapp",
+            "PRIOR_DEPLOYMENT_TRAFFIC_ALLOCATION": "",
+            "CURRENT_DEPLOYMENT_NAME": "",
+            "CURRENT_DEPLOYMENT_TRAFFIC_ALLOCATION": "100",
+            "DEPLOYMENT_VM_SIZE": "Standard_F4s_v2",
+            "DEPLOYMENT_INSTANCE_COUNT": 1,
+            "ENVIRONMENT_VARIABLES": {
+                "example-name": "example-value"
+            }
+        }
+    ],
+    "webapp_endpoint":[
+        {
+            "ENV_NAME": "dev",
+            "TEST_FILE_PATH": "sample-request.json",
+            "CONNECTION_NAMES": ["aoai"],
+            "REGISTRY_NAME": "amlresources",
+            "REGISTRY_RG_NAME": "aml_upskill",
+            "APP_PLAN_NAME": "ASP-amlupskill-b195 (P1v3: 1)",
+            "WEB_APP_NAME": "llm-poc-webapp",
+            "WEB_APP_RG_NAME": "aml_upskill",
+            "WEB_APP_SKU": "P1v3",
+            "USER_MANAGED_ID": "llmsops_uai"
+            
+        }
+    ]
+}
